@@ -1,0 +1,35 @@
+/* Interface Awal*/
+html,
+body {
+  height: 100%;
+  margin: 5%;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Interface Awal*/
+
+.window-content {
+  text-align: center;
+}
+
+.content-title {
+  font-weight: bold;
+}
+
+.content-image {
+  width: 100%;
+  max-height: 300px;
+  text-align: center;
+}
+
+.content-text {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
