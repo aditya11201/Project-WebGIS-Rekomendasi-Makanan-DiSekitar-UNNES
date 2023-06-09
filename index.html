@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE <html>
 
 <head>
 	<base target="_top">
@@ -87,19 +86,14 @@
 			</div>
 			<div class="leaflet-pane leaflet-tooltip-pane"></div>
 			<div class="leaflet-pane leaflet-popup-pane">
-
 			</div>
 			<div class="leaflet-proxy leaflet-zoom-animated"
 				style="transform: translate3d(109363px, 198864px, 0px) scale(1024);"></div>
 		</div>
 		<div class="leaflet-control-container">
-
-
 			<div class="leaflet-top leaflet-left">
-
 			</div>
 			<div class="leaflet-top leaflet-right">
-
 				<div class="leaflet-control-layers leaflet-control" aria-haspopup="true"><a
 						class="leaflet-control-layers-toggle" href="#" title="Layers" role="button"></a>
 					<section class="leaflet-control-layers-list">
@@ -121,9 +115,6 @@
 				</div>
 			</div>
 			<div class="leaflet-bottom leaflet-left"></div>
-
-
-
 			<div class="leaflet-bottom leaflet-right">
 				<div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com"
 						title="A JavaScript library for interactive maps"><svg aria-hidden="true"
@@ -136,11 +127,63 @@
 						href="http://www.openstreetmap.org/copyright">OpenStreetMap</a></div>
 			</div>
 		</div>
-
-
-
 	</div>
 	<script src="script.js"></script>
+
+	<div id="marker-content1" style="display: none;">
+		<img src="https://lh5.googleusercontent.com/p/AF1QipPCTqbmer8qaIq3xSb6RA6rgM19uUJCHpmcmvot=w408-h306-k-no"
+			alt="Image">
+		<h2>Daftar Harga</h2>
+		<p><a href="https://www.google.com/maps/place/Bakso+dan+Mie+Ayam+Bosku/@-7.0579994,110.3973732,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipNoI3it7ydj9_dshRotEklm5dYBHAYAozG0ZQI2!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipNoI3it7ydj9_dshRotEklm5dYBHAYAozG0ZQI2%3Dw203-h360-k-no!7i1080!8i1920!4m20!1m10!3m9!1s0x2e70896cfc62ef6d:0xd10f4c915ad7e587!2sBakso+dan+Mie+Ayam+Bosku!8m2!3d-7.0579994!4d110.3973732!10e5!14m1!1BCgIgAQ!16s%2Fg%2F11f61ggnkt!3m8!1s0x2e70896cfc62ef6d:0xd10f4c915ad7e587!8m2!3d-7.0579994!4d110.3973732!10e5!14m1!1BCgIYIQ!16s%2Fg%2F11f61ggnkt?entry=ttu#"
+				target="_blank">Lihat daftar harga</a></p>
+		<h2>Informasi Lokasi</h2>
+		<p><strong>Nama:</strong> Jude Bellingham</p>
+		<p><strong>Alamat:</strong> W9RW+RW5, Patemon, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50228</p>
+		<p><strong>Koordinat:</strong> -7.057946668691204, 110.39740750550186</p>
+		<h2>Deskripsi</h2>
+		<p>Bakso The best di daerah unnes rame setiap mau makan rame teruss</p>
+		<h2>Google Maps</h2>
+		<a href="https://www.google.com/maps?q=-7.057946668691204,110.39740750550186" target="_blank"
+			class="button button5">Lihat di Google Maps</a>
+	</div>
+
+	<script>
+		var markerIcon = L.icon({
+			iconUrl: 'https://lh5.googleusercontent.com/p/AF1QipPCTqbmer8qaIq3xSb6RA6rgM19uUJCHpmcmvot=w114-h86-k-no',
+			iconSize: [30, 30], // ukuran gambar logo marker
+			iconAnchor: [16, 32] // titik anchor pada gambar logo marker
+		});
+
+		var marker = L.marker([-7.057946668691204, 110.39740750550186], {
+			title: "Bakso dan Mie Ayam Bosku",
+			icon: markerIcon
+		}).addTo(tmptmknenak);
+
+
+
+		// Ambil elemen div yang berisi konten marker
+		var markerContent = document.getElementById('marker-content1');
+
+		// Tambahkan event listener untuk menampilkan konten marker saat diklik
+		marker.addEventListener('click', function () {
+			var win = L.control.window(map, {
+				title: 'Bakso dan Mie Ayam Bosku',
+				maxWidth: 800,
+				modal: true
+			});
+
+			// Set konten window dengan konten marker
+			win.content(markerContent.innerHTML);
+
+			win.prompt({
+				callback: function () {
+					alert('Klik logo ikonnya lagi yak kalau mau liat info :)');
+				}
+			});
+
+			win.show();
+		});
+	</script>
 
 
 </body>
