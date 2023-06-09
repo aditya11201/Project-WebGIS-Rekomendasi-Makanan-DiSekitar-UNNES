@@ -37,7 +37,7 @@ body {
 }
 
 /* CSS untuk judul */
-.leaflet-control-window h2 {
+.leaflet-control-window h1 {
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -47,7 +47,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* CSS untuk tautan */
+/* CSS untuk tautan/link */
 .leaflet-control-window a {
   color: #007bff;
   text-decoration: none;
@@ -57,10 +57,23 @@ body {
   text-decoration: underline;
 }
 
+.infolok {
+  background-color: #007bff;
+}
+
 .button5 {
-  background-color: #000000;
-  color: black;
-  border: 5px solid #000000;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
 
 .button5:hover {
@@ -68,27 +81,44 @@ body {
   color: white;
 }
 
-/* button ok */
-button {
-  width: 100px;
-  height: 50px;
+
+
+.buttongo {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 25px;
+  width: 250px;
+  transition: all 0.5s;
   cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
-  background: white;
-  border: 2px solid black;
-  box-shadow: 5px 5px 0 black,
-    -5px -5px 0 black,
-    -5px 5px 0 black,
-    5px -5px 0 black;
-  transition: 500ms ease-in-out;
+  margin: 5px;
 }
 
-button:hover {
-  box-shadow: 20px 5px 0 black, -20px -5px 0 black;
+.buttongo span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-button:focus {
-  outline: none;
+.buttongo span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttongo:hover span {
+  padding-right: 25px;
+}
+
+.buttongo:hover span:after {
+  opacity: 1;
+  right: 0;
 }
