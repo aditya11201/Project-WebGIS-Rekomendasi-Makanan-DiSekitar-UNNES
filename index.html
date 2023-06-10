@@ -178,12 +178,14 @@
 			<div class="w3-container w3-light-grey w3-padding">
 				<button class="w3-button w3-right w3-white w3-border"
 					onclick="document.getElementById('id01').style.display='none'">Close</button>
-				<a id="mapLink" href="#" target="_blank">
+				<a href="https://www.google.com/maps/search/?api=1&query=-7.057946668691204,110.39740750550186"
+					target="_blank">
 					<button class="buttonmaps" style="vertical-align:middle">
 						<span>Maps</span>
 					</button>
 				</a>
 			</div>
+
 		</div>
 	</div>
 
@@ -198,17 +200,6 @@
 			title: "Bakso dan Mie Ayam Bosku",
 			icon: markerIcon
 		}).addTo(tmptmknenak);
-
-		var mapLink = document.getElementById('mapLink');
-		mapLink.addEventListener('click', function (e) {
-			e.preventDefault();
-			var lat = -7.057946668691204;
-			var lng = 110.39740750550186;
-			var url = 'https://www.google.com/maps/search/?api=1&query=' + lat + '&lng=' + lng;
-			window.open(url, '_blank');
-		});
-
-
 
 		// Ambil elemen div yang berisi konten marker
 		var markerContent = document.getElementById('marker-content1');
