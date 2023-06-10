@@ -152,11 +152,20 @@
 			</div>
 
 			<div id="Fotolok" class="w3-container city">
-				<div class="w3-card-4"> <img
-						src="https://lh5.googleusercontent.com/p/AF1QipPCTqbmer8qaIq3xSb6RA6rgM19uUJCHpmcmvot=w408-h306-k-no"
-						alt="Foto" style="width:100%"></div>
-				<div class="w3-container w3-center">
-					<p>Foto ini diambil dari Google Maps</p>
+				<div class="w3-row-padding w3-margin-top">
+					<div class="w3-third">
+						<div class="w3-card-4"> <img
+								src="https://lh5.googleusercontent.com/p/AF1QipPCTqbmer8qaIq3xSb6RA6rgM19uUJCHpmcmvot=w408-h306-k-no"
+								onclick="document.getElementById('modal01').style.display='block'"
+								class="w3-hover-opacity" alt="Foto" style="width:100%"></div>
+						<div class="w3-container w3-center">
+							<p>Mie Ayam Dengan Ceker</p>
+							<div id="modal01" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+								<img class="w3-modal-content"
+									src="https://lh5.googleusercontent.com/p/AF1QipPCTqbmer8qaIq3xSb6RA6rgM19uUJCHpmcmvot=w408-h306-k-no">
+							</div>
+						</div>
+					</div>
 				</div>
 
 			</div>
