@@ -330,6 +330,68 @@
 	</div>
 	<!--Data Nasi Goreng Berhias Brebes-->
 
+	<!--Data Warung Penyet-->
+	<div id="id04" class="w3-modal" style="z-index: 1000;">
+		<div class="w3-modal-content w3-card-4 w3-animate-zoom">
+			<header class="w3-container w3-blue">
+				<span onclick="document.getElementById('id04').style.display='none'"
+					class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+				<h2>WrpenyetLombokRawitUnnes</h2>
+			</header>
+
+			<div class="w3-bar w3-border-bottom">
+				<button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Fotolok4')">Foto Lokasi</button>
+				<button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Harga4')">Daftar Harga</button>
+				<button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Infolok4')">Informasi
+					Lokasi</button>
+			</div>
+
+			<div id="Fotolok4" class="w3-container city">
+				<div class="w3-row-padding w3-margin-top">
+					<div class="w3-third">
+						<div class="w3-card-4"> <img
+								src="https://lh5.googleusercontent.com/p/AF1QipN5nrO3QIMKNGgMUzuE9dBy9ltxD39M4p771_Ht=w425-h240-k-no"
+								onclick="document.getElementById('modal04').style.display='block'"
+								class="w3-hover-opacity" alt="Foto" style="width:100%"></div>
+						<div class="w3-container w3-center">
+							<p>Foto Lokasi</p>
+							<div id="modal04" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+								<img class="w3-modal-content"
+									src="https://lh5.googleusercontent.com/p/AF1QipN5nrO3QIMKNGgMUzuE9dBy9ltxD39M4p771_Ht=w425-h240-k-no">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="Harga4" class="w3-container city">
+				<h1>Harga</h1>
+				<p>Mulai Dari 15 Ribuan</p>
+			</div>
+
+			<div id="Infolok4" class="w3-container city">
+				<h1>Alamat</h1>
+				<p>Jl. Kolonel HR Hadijanto, Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50229</p>
+				<h1>Koordinat Lokasi</h1>
+				<p>-7.047224871391219, 110.38991797128035</p>
+			</div>
+
+			<div class="w3-container w3-light-grey w3-padding">
+				<button class="w3-button w3-right w3-white w3-border"
+					onclick="document.getElementById('id04').style.display='none'">Close</button>
+				<a href="https://www.google.com/maps/search/?api=1&query=-7.047224871391219, 110.38991797128035"
+					target="_blank">
+					<button class="buttonmaps" style="vertical-align:middle">
+						<span>Maps</span>
+					</button>
+				</a>
+			</div>
+
+		</div>
+	</div>
+	<!--Data Warung Penyet-->
+
 
 
 
@@ -339,7 +401,6 @@
 			iconSize: [30, 30], // ukuran gambar logo marker
 			iconAnchor: [16, 32] // titik anchor pada gambar logo marker
 		});
-		// Membuat objek cluster
 
 
 		// Bakso
@@ -355,28 +416,47 @@
 		});
 
 		// Burjo Laskar 2
-		var marker1 = L.marker([-7.056004468211421, 110.39658764120955], {
+		var marker2 = L.marker([-7.056004468211421, 110.39658764120955], {
 			title: "Burjo Laskar 2",
 			icon: markerIcon
 		}).addTo(tmptmknenak);
 		// Ambil elemen div yang berisi konten marker
-		var marker1Content = document.getElementById('id02');
+		var marker2Content = document.getElementById('id02');
 		// Tambahkan event listener untuk menampilkan konten marker saat diklik
-		marker1.addEventListener('click', function () {
+		marker2.addEventListener('click', function () {
 			document.getElementById('id02').style.display = 'block';
 		});
 
 		// Nasi Goreng Berhias Brebes
-		var marker1 = L.marker([-7.055878173266243, 110.3947063596325], {
+		var marker3 = L.marker([-7.055878173266243, 110.3947063596325], {
 			title: "Nasi Goreng Berhias Brebes",
 			icon: markerIcon
 		}).addTo(tmptmknenak);
 		// Ambil elemen div yang berisi konten marker
-		var marker1Content = document.getElementById('id03');
+		var marker3Content = document.getElementById('id03');
 		// Tambahkan event listener untuk menampilkan konten marker saat diklik
-		marker1.addEventListener('click', function () {
+		marker3.addEventListener('click', function () {
 			document.getElementById('id03').style.display = 'block';
 		});
+
+		// Warung Penyet
+		var marker4 = L.marker([-7.047224871391219, 110.38991797128035], {
+			title: "WrpenyetLombokRawitUnnes",
+			icon: markerIcon
+		}).addTo(tmptmknenak);
+		// Ambil elemen div yang berisi konten marker
+		var marker4Content = document.getElementById('id04');
+		// Tambahkan event listener untuk menampilkan konten marker saat diklik
+		marker4.addEventListener('click', function () {
+			document.getElementById('id04').style.display = 'block';
+		});
+
+
+
+
+
+
+
 
 		function openCity(evt, cityName) {
 			var i, x, tablinks;

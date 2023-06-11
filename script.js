@@ -8,8 +8,6 @@ var Stamen_TonerLabels = L.tileLayer(
   });
 var tmptmknenak = L.layerGroup();
 
-var mwrpenyet = L.marker([-7.047224871391219, 110.38991797128035]).bindPopup('WrpenyetLombokRawitUnnes').addTo(
-  tmptmknenak);
 
 /* Layer Satelite */
 var mbAttr =
@@ -65,7 +63,7 @@ var baseLayers = {
 };
 
 var overlays = {
-  'Tmpt Makan Enak': tmptmknenak
+  'Tempat Makan Enak': tmptmknenak
 };
 
 var layerControl = L.control.layers(baseLayers, overlays).addTo(map);
