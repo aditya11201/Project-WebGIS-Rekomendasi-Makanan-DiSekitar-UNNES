@@ -8,9 +8,6 @@ var Stamen_TonerLabels = L.tileLayer(
   });
 var tmptmknenak = L.layerGroup();
 
-var mburjo = L.marker([-7.056004468211421, 110.39658764120955]).bindPopup('Burjo Laskar 2').addTo(tmptmknenak);
-var mnasgor = L.marker([-7.055878173266243, 110.3947063596325]).bindPopup('Nasi Goreng Berhias Brebes').addTo(
-  tmptmknenak);
 var mwrpenyet = L.marker([-7.047224871391219, 110.38991797128035]).bindPopup('WrpenyetLombokRawitUnnes').addTo(
   tmptmknenak);
 

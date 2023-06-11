@@ -15,7 +15,15 @@
 		integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="">
 	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
 		integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-
+	<!--Clustering-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.1/MarkerCluster.css" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.1/MarkerCluster.Default.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.1/leaflet.markercluster.js"></script>
+	<!--Clustering-->
 
 	<!--Pop Up-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css">
@@ -136,6 +144,7 @@
 
 
 	</div>
+	<!--Data Bakso-->
 	<div id="id01" class="w3-modal" style="z-index: 1000;">
 		<div class="w3-modal-content w3-card-4 w3-animate-zoom">
 			<header class="w3-container w3-blue">
@@ -173,8 +182,6 @@
 			<div id="Harga" class="w3-container city">
 				<h1>Harga</h1>
 				<p>W9RW+RW5, Patemon, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50228</p>
-
-
 			</div>
 
 			<div id="Infolok" class="w3-container city">
@@ -197,6 +204,134 @@
 
 		</div>
 	</div>
+	<!--Data Bakso-->
+
+	<!--Data Burjo Laskar 2-->
+	<div id="id02" class="w3-modal" style="z-index: 1000;">
+		<div class="w3-modal-content w3-card-4 w3-animate-zoom">
+			<header class="w3-container w3-blue">
+				<span onclick="document.getElementById('id02').style.display='none'"
+					class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+				<h2>Burjo Laskar 2</h2>
+			</header>
+
+			<div class="w3-bar w3-border-bottom">
+				<button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Fotolok2')">Foto Lokasi</button>
+				<button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Harga2')">Daftar Harga</button>
+				<button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Infolok2')">Informasi
+					Lokasi</button>
+			</div>
+
+			<div id="Fotolok2" class="w3-container city">
+				<div class="w3-row-padding w3-margin-top">
+					<div class="w3-third">
+						<div class="w3-card-4"> <img
+								src="https://lh3.googleusercontent.com/p/AF1QipM5zUQ3Xz_tEK7tYlvcp4yQupZ35SEBhjK5dlcv=w1080-h608-p-no-v0"
+								onclick="document.getElementById('modal02').style.display='block'"
+								class="w3-hover-opacity" alt="Foto" style="width:100%"></div>
+						<div class="w3-container w3-center">
+							<p>Foto Tampak Depan</p>
+							<div id="modal02" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+								<img class="w3-modal-content"
+									src="https://lh3.googleusercontent.com/p/AF1QipM5zUQ3Xz_tEK7tYlvcp4yQupZ35SEBhjK5dlcv=w1080-h608-p-no-v0">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="Harga2" class="w3-container city">
+				<h1>Harga</h1>
+				<p>W9RW+RW5, Patemon, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50228</p>
+			</div>
+
+			<div id="Infolok2" class="w3-container city">
+				<h1>Alamat</h1>
+				<p>Gg. Mangga, Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50229</p>
+				<h1>Koordinat Lokasi</h1>
+				<p>-7.056004468211421, 110.39658764120955</p>
+			</div>
+
+			<div class="w3-container w3-light-grey w3-padding">
+				<button class="w3-button w3-right w3-white w3-border"
+					onclick="document.getElementById('id02').style.display='none'">Close</button>
+				<a href="https://www.google.com/maps/search/?api=1&query=-7.056004468211421,110.39658764120955"
+					target="_blank">
+					<button class="buttonmaps" style="vertical-align:middle">
+						<span>Maps</span>
+					</button>
+				</a>
+			</div>
+
+		</div>
+	</div>
+	<!--Data Burjo Laskar 2-->
+
+	<!--Data Nasi Goreng Berhias Brebes-->
+	<div id="id03" class="w3-modal" style="z-index: 1000;">
+		<div class="w3-modal-content w3-card-4 w3-animate-zoom">
+			<header class="w3-container w3-blue">
+				<span onclick="document.getElementById('id03').style.display='none'"
+					class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+				<h2>Nasi Goreng Berhias Brebes</h2>
+			</header>
+
+			<div class="w3-bar w3-border-bottom">
+				<button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Fotolok3')">Foto Lokasi</button>
+				<button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Harga3')">Daftar Harga</button>
+				<button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Infolok3')">Informasi
+					Lokasi</button>
+			</div>
+
+			<div id="Fotolok3" class="w3-container city">
+				<div class="w3-row-padding w3-margin-top">
+					<div class="w3-third">
+						<div class="w3-card-4"> <img
+								src="https://lh5.googleusercontent.com/p/AF1QipO-oJDguxNzVTt2YJ-5KACbt6qyaMkjOk2yP5G2=w408-h272-k-no"
+								onclick="document.getElementById('modal03').style.display='block'"
+								class="w3-hover-opacity" alt="Foto" style="width:100%"></div>
+						<div class="w3-container w3-center">
+							<p>Foto Nasi Goreng</p>
+							<div id="modal03" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+								<img class="w3-modal-content"
+									src="https://lh5.googleusercontent.com/p/AF1QipO-oJDguxNzVTt2YJ-5KACbt6qyaMkjOk2yP5G2=w408-h272-k-no">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="Harga3" class="w3-container city">
+				<h1>Harga</h1>
+				<p>W9RW+RW5, Patemon, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50228</p>
+			</div>
+
+			<div id="Infolok3" class="w3-container city">
+				<h1>Alamat</h1>
+				<p>Jl. Taman Siswa, Sekaran, Kec. Gn. Pati, Kota Semarang, Jawa Tengah 50229</p>
+				<h1>Koordinat Lokasi</h1>
+				<p>-7.055878173266243, 110.3947063596325</p>
+			</div>
+
+			<div class="w3-container w3-light-grey w3-padding">
+				<button class="w3-button w3-right w3-white w3-border"
+					onclick="document.getElementById('id03').style.display='none'">Close</button>
+				<a href="https://www.google.com/maps/search/?api=1&query=-7.055878173266243, 110.3947063596325"
+					target="_blank">
+					<button class="buttonmaps" style="vertical-align:middle">
+						<span>Maps</span>
+					</button>
+				</a>
+			</div>
+
+		</div>
+	</div>
+	<!--Data Nasi Goreng Berhias Brebes-->
+
+
+
 
 	<script>
 		var markerIcon = L.icon({
@@ -204,18 +339,43 @@
 			iconSize: [30, 30], // ukuran gambar logo marker
 			iconAnchor: [16, 32] // titik anchor pada gambar logo marker
 		});
+		// Membuat objek cluster
 
-		var marker = L.marker([-7.057946668691204, 110.39740750550186], {
+
+		// Bakso
+		var marker1 = L.marker([-7.057946668691204, 110.39740750550186], {
 			title: "Bakso dan Mie Ayam Bosku",
 			icon: markerIcon
 		}).addTo(tmptmknenak);
-
 		// Ambil elemen div yang berisi konten marker
-		var markerContent = document.getElementById('marker-content1');
-
+		var marker1Content = document.getElementById('id01');
 		// Tambahkan event listener untuk menampilkan konten marker saat diklik
-		marker.addEventListener('click', function () {
+		marker1.addEventListener('click', function () {
 			document.getElementById('id01').style.display = 'block';
+		});
+
+		// Burjo Laskar 2
+		var marker1 = L.marker([-7.056004468211421, 110.39658764120955], {
+			title: "Burjo Laskar 2",
+			icon: markerIcon
+		}).addTo(tmptmknenak);
+		// Ambil elemen div yang berisi konten marker
+		var marker1Content = document.getElementById('id02');
+		// Tambahkan event listener untuk menampilkan konten marker saat diklik
+		marker1.addEventListener('click', function () {
+			document.getElementById('id02').style.display = 'block';
+		});
+
+		// Nasi Goreng Berhias Brebes
+		var marker1 = L.marker([-7.055878173266243, 110.3947063596325], {
+			title: "Nasi Goreng Berhias Brebes",
+			icon: markerIcon
+		}).addTo(tmptmknenak);
+		// Ambil elemen div yang berisi konten marker
+		var marker1Content = document.getElementById('id03');
+		// Tambahkan event listener untuk menampilkan konten marker saat diklik
+		marker1.addEventListener('click', function () {
+			document.getElementById('id03').style.display = 'block';
 		});
 
 		function openCity(evt, cityName) {
